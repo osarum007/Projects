@@ -1,9 +1,2 @@
 #!/bin/sh
-
-export SYNOPSYS=/shared/hwmisc/apps/synopsys/syn/2022.12
-export SYNOPSYS_SYN=/shared/hwmisc/apps/synopsys/syn/2022.12
-export SYNOPSYS_FM=/shared/hwmisc/apps/synopsys/fm/2023.12-SP4
-export PATH=/bin:/usr/bin:$SYNOPSYS/bin:$SYNOPSYS_FM/bin
 ./run | tee log/output.log
-
-
