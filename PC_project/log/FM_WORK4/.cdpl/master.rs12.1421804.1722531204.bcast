@@ -1,7 +1,0 @@
-# Master Broadcast File
-time 1722531204
-pid 1421804
-log /work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/log/FM_WORK4/.cdpl/master.rs12.1421804.log
-tcp 172.22.1.112:41309
-wlog /work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/log/FM_WORK4/.cdpl/worker.W1.rs12.1421822.log
-status done
