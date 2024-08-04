@@ -1,0 +1,78 @@
+
+
+##################################################################################
+# © 2002-2021 Synopsys, Inc. This Synopsys product and all associated
+# documentation and files are proprietary to Synopsys, Inc. and may only be
+# used pursuant to the terms and conditions of a written license agreement with
+# Synopsys, Inc. All other use, reproduction, modification, or distribution of
+# the Synopsys product or the associated documentation or files is strictly
+# prohibited.
+##################################################################################
+
+
+
+guide \
+  -tool { Design Compiler } \
+  -version { U-2022.12-SP4 built May 23, 2023 } \
+  -SVF { 21.230 } \
+  -timestamp { Thu Aug  1 14:23:24 2024 } 
+
+## Operation Id: 1
+guide_environment \
+  { { dc_product_version U-2022.12-SP4 } \
+    { dc_product_build_date { May 23, 2023 } } \
+    { bus_dimension_separator_style ][ } \
+    { bus_extraction_style %s\[%d:%d\] } \
+    { bus_multiple_separator_style , } \
+    { bus_naming_style %s[%d] } \
+    { bus_range_separator_style : } \
+    { dc_allow_rtl_pg false } \
+    { hdlin_allow_4state_parameters TRUE } \
+    { hdlin_unified_rtl_read FALSE } \
+    { hdlin_enable_hier_naming FALSE } \
+    { hdlin_enable_upf_compatible_naming FALSE } \
+    { hdlin_vhdl_preserve_case FALSE } \
+    { hdlin_generate_naming_style %s_%d } \
+    { hdlin_generate_separator_style _ } \
+    { hdlin_infer_enumerated_types FALSE } \
+    { hdlin_interface_port_downto FALSE } \
+    { hdlin_optimize_enum_types FALSE } \
+    { hdlin_preserve_sequential none } \
+    { hdlin_sverilog_std 2017 } \
+    { hdlin_sv_packages dont_chain } \
+    { hdlin_sv_union_member_naming FALSE } \
+    { hdlin_vhdl_std 2008 } \
+    { hdlin_vrlg_std 2005 } \
+    { hdlin_v2005_replication_semantics TRUE } \
+    { hdlin_while_loop_iterations 4096 } \
+    { hdlin_enable_verilog_configurations_canonical TRUE } \
+    { hdlin_enable_verilog_configurations_array_n_block TRUE } \
+    { hdlin_enable_persistent_macros FALSE } \
+    { hdlin_persistent_macros_filename syn_auto_generated_macro_file.sv } \
+    { link_portname_allow_period_to_match_underscore false } \
+    { link_portname_allow_square_bracket_to_match_underscore false } \
+    { port_complement_naming_style %s_BAR } \
+    { simplified_verification_mode FALSE } \
+    { template_naming_style %s_%p } \
+    { template_parameter_style %s%d } \
+    { template_separator_style _ } \
+    { upf_iso_filter_elements_with_applies_to ENABLE } \
+    { upf_isols_allow_instances_in_elements true } \
+    { link_library {  * your_library.db  } } \
+    { target_library your_library.db } \
+    { search_path { . /shared/hwmisc/apps/synopsys/syn/2022.12-SP4/libraries/syn /shared/hwmisc/apps/synopsys/syn/2022.12-SP4/dw/syn_ver /shared/hwmisc/apps/synopsys/syn/2022.12-SP4/dw/sim_ver } } \
+    { synopsys_root /shared/hwmisc/apps/synopsys/syn/2022.12-SP4 } \
+    { cwd /work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project } \
+    { analyze { -format vhdl -library WORK -work work src/ALU.vhd } } \
+    { analyze { -format vhdl -library WORK -work work src/rom_128x8_sync.vhd } } \
+    { analyze { -format vhdl -library WORK -work work src/rw_96x8_sync.vhd } } \
+    { analyze { -format vhdl -library WORK -work work src/Output_Ports.vhd } } \
+    { analyze { -format vhdl -library WORK -work work src/memory.vhd } } \
+    { analyze { -format vhdl -library WORK -work work src/data_path.vhd } } \
+    { analyze { -format vhdl -library WORK -work work src/control_unit.vhd } } \
+    { analyze { -format vhdl -library WORK -work work src/cpu.vhd } } \
+    { analyze { -format vhdl -library WORK -work work src/computer.vhd } } \
+    { compile_seqmap_propagate_high_effort true } } 
+
+setup
+

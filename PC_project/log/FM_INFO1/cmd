@@ -1,0 +1,6 @@
+/shared/hwmisc/apps/synopsys/fm/2022.12/linux64/fm/bin/fm_shell_exec -r /shared/hwmisc/apps/synopsys/fm/2022.12 -f /work/aigbe/hw1/vhdl/common/syn/common/fms.tcl 
+
+Version    = U-2022.12
+Build      = U-2022.12-formality_u2022.12_rel-7907914
+Build date = Nov 22, 2022
+Run date   = Thu Aug  1 14:25:02 2024 BST

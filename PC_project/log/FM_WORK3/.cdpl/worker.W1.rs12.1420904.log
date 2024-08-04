@@ -1,0 +1,36 @@
+1722528525.735719: 1420904-14d7f48017c0: cdpl_log.c:221: in cdpl_log_open(): debug: @@start_of_log@@
+1722528525.735738: 1420904-14d7f48017c0: cdpl_log.c:729: in cdpl_log_dump_sysinfo(): info: time: 2024/08/01 17:08:45 BST +0100
+1722528525.735742: 1420904-14d7f48017c0: cdpl_log.c:731: in cdpl_log_dump_sysinfo(): info: version: M_2016.12_SP2_PROD_CDPL 
+1722528525.735744: 1420904-14d7f48017c0: cdpl_log.c:736: in cdpl_log_dump_sysinfo(): info: system: Linux 5.8.15-301.fc33.x86_64 #1 SMP Thu Oct 15 16:58:06 UTC 2020
+1722528525.735745: 1420904-14d7f48017c0: cdpl_log.c:740: in cdpl_log_dump_sysinfo(): info: processor: x86_64 64-bits
+1722528525.735747: 1420904-14d7f48017c0: cdpl_log.c:742: in cdpl_log_dump_sysinfo(): info: hostname: rs12
+1722528525.735748: 1420904-14d7f48017c0: cdpl_log.c:223: in cdpl_log_open(): debug: path: /work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/log/FM_WORK3/.cdpl/worker.W1.rs12.1420904.log
+1722528525.735750: 1420904-14d7f48017c0: cdpl_log.c:224: in cdpl_log_open(): debug: dir: /work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/log/FM_WORK3/.cdpl
+1722528525.735752: 1420904-14d7f48017c0: cdpl_worker.c:738: in cdpl_wk_new(): info: creating worker instance
+1722528525.736257: 1420904-14d7f48017c0: cdpl_worker.c:935: in cdpl_wk_start(): debug: starting worker
+1722528525.736261: 1420904-14d7f48017c0: cdpl_worker.c:279: in cdpl_wk_setup(): info: CDPL_SERVER is "172.22.1.112:40823"
+1722528525.736263: 1420904-14d7f48017c0: cdpl_worker.c:302: in cdpl_wk_setup(): info: server 172.22.1.112, port 40823
+1722528525.736265: 1420904-14d7f48017c0: cdpl_worker.c:322: in cdpl_wk_setup(): info: CDPL_ID is "1:1:1:1:426752765"
+1722528525.736270: 1420904-14d7f48017c0: cdpl_worker.c:370: in cdpl_wk_setup(): info: we are W1-B1-J1-M1-S426752765
+1722528525.736271: 1420904-14d7f48017c0: cdpl_worker.c:372: in cdpl_wk_setup(): info: we are on host rs12
+1722528525.736272: 1420904-14d7f48017c0: cdpl_worker.c:382: in cdpl_wk_daemonize(): debug: will *not* daemonize
+1722528525.736274: 1420904-14d7f48017c0: cdpl_ipc.c:2610: in cdpl_ipc_connect(): info: connecting to 172.22.1.112:40823
+1722528525.736388: 1420904-14d7f48017c0: cdpl_ipc.c:2676: in cdpl_ipc_connect(): info: connected as `172.22.1.112:50248'
+1722528525.736396: 1420904-14d7f48017c0: cdpl_ipc.c:1780: in cdpl_ipc_host_accept(): debug: accepted host `172.22.1.112:40823'
+1722528525.736400: 1420904-14d7f48017c0: cdpl_ipc.c:2453: in cdpl_ipc_start(): debug: starting IPC server 172.22.1.112:34317
+1722528525.736507: 1420904-14d7f48017c0: cdpl_compat_worker.c:148: in cdplStartWorker(): info: SNPSLMD_LICENSE_FILE is 27000@uklic:27031@synopsys-1-hwlicense.pcsg.nokia.net
+1722528525.736518: 1420904-14d7e6641640: cdpl_worker.c:538: in cdpl_wk_listen(): debug: ready
+1722528525.736806: 1420904-14d7e6641640: cdpl_worker.c:595: in cdpl_wk_listen(): debug: received ASSIGN message
+1722528525.736819: 1420904-14d7f48017c0: cdpl_worker.c:1112: in cdpl_wk_wait_timeout(): info: starting task T0
+1722528525.736881: 1420904-14d7f48017c0: cdpl_worker.c:1228: in cdpl_wk_finalize(): info: finishing task T0
+1722528525.737214: 1420904-14d7e6641640: cdpl_worker.c:595: in cdpl_wk_listen(): debug: received ASSIGN message
+1722528525.737231: 1420904-14d7f48017c0: cdpl_worker.c:1112: in cdpl_wk_wait_timeout(): info: starting task T1
+1722528525.737251: 1420904-14d7f48017c0: cdpl_worker.c:1228: in cdpl_wk_finalize(): info: finishing task T1
+1722528526.041356: 1420904-14d7e6842640: cdpl_ipc.c:609: in _readv(): warning: read(): EOF
+1722528526.041389: 1420904-14d7e6842640: cdpl_ipc.c:1465: in _epoll_recv(): debug: _readv(): Broken pipe
+1722528526.041396: 1420904-14d7e6842640: cdpl_ipc.c:1700: in _epoll_main(): debug: _epoll_recv(): Broken pipe
+1722528526.041411: 1420904-14d7e6842640: cdpl_ipc.c:1064: in _host_drop__UNSAFE(): debug: dropping host `172.22.1.112:40823'
+1722528526.041494: 1420904-14d7e6641640: cdpl_worker.c:571: in cdpl_wk_listen(): debug: received DROP notification
+1722528526.041513: 1420904-14d7e6641640: cdpl_worker.c:575: in cdpl_wk_listen(): debug: we were dropped by the server
+1722528526.041530: 1420904-14d7e6641640: cdpl_worker.c:502: in _wk_kill(): debug: killing worker
+1722528526.041534: 1420904-14d7e6641640: cdpl_ipc.c:2498: in cdpl_ipc_kill(): debug: stopping event server

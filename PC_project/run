@@ -1,0 +1,2 @@
+dc_shell -f run_dc.tcl
+fm_shell -f run_fm.tcl

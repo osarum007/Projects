@@ -1,0 +1,216 @@
+
+                                 Formality (R)
+
+         Version O-2018.06-SP2-VAL-20181012 for linux64 - Oct 12, 2018
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+  ** Highlights of Formality (R) Version O-2018.06 **
+   - Improved default solver strategy for reducing inconclusive verifications
+   - Automatic analysis to detect UPF issues before verification
+   - Enhanced UPF features for consistency with the Synopsys low power flow
+   - Improved GUI report display and filtering
+
+   * Please refer to the Formality Release Notes for details and additional enhancements
+
+Build: 5247560
+Hostname: rs12
+Current time: Thu Aug  1 17:53:09 2024
+
+Loading db file '/shared/hwmisc/apps/synopsys/fm/2018.06-SP2-VAL-181012//libraries/syn/gtech.db'
+Warning: Cannot use command line editor for terminal type 'xterm-256color'. (CLE-1)
+#!fm_shell
+suppress_message CMD-041
+set script_name fms
+fms
+source ../scripts/project.tcl
+Error: could not open script file "../scripts/project.tcl" (CMD-015)
+Information: script '/work/aigbe/hw1/vhdl/common/syn/common/fms.tcl'
+	stopped at line 7 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"source ../scripts/project.tcl"
+ -- End Extended Error Info
+fm_shell (setup)> fm_shell (setup)> true
+fm_shell (setup)> fm_shell (setup)> SVF set to 'results/compile_computer.svf'.
+1
+fm_shell (setup)> fm_shell (setup)> Created container 'ref'
+Current container set to 'ref'
+1
+fm_shell (setup)> fm_shell (setup)> 1993
+fm_shell (setup)> true
+fm_shell (setup)> Loading vhdl file '/work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/ALU.vhd'
+1
+fm_shell (setup)> Loading vhdl file '/work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/rom_128x8_sync.vhd'
+Warning: /work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/rom_128x8_sync.vhd  line 50
+	signal ROM block rom_128x8_sync.Behavioral
+	Default initial value of signal will be ignored  (FMR_VHDL-1002)
+   ATTENTION: RTL interpretation messages were produced during read.
+              Verification results may disagree with a logic simulator.
+1
+fm_shell (setup)> Loading vhdl file '/work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/rw_96x8_sync.vhd'
+Warning: /work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/rw_96x8_sync.vhd  line 45
+	signal RAM block rw_96x8_sync.Behavioral
+	Default initial value of signal will be ignored  (FMR_VHDL-1002)
+   ATTENTION: RTL interpretation messages were produced during read.
+              Verification results may disagree with a logic simulator.
+1
+fm_shell (setup)> Loading vhdl file '/work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/Output_Ports.vhd'
+Warning: /work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/Output_Ports.vhd  line 40
+	signal RAM block Output_Ports.Behavioral
+	Default initial value of signal will be ignored  (FMR_VHDL-1002)
+   ATTENTION: RTL interpretation messages were produced during read.
+              Verification results may disagree with a logic simulator.
+1
+fm_shell (setup)> Loading vhdl file '/work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/memory.vhd'
+1
+fm_shell (setup)> Loading vhdl file '/work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/data_path.vhd'
+1
+fm_shell (setup)> Loading vhdl file '/work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/control_unit.vhd'
+1
+fm_shell (setup)> Loading vhdl file '/work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/cpu.vhd'
+1
+fm_shell (setup)> Loading vhdl file '/work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/computer.vhd'
+1
+fm_shell (setup)> fm_shell (setup)> Setting top design to 'ref:/WORK/computer'
+Status:   Elaborating design computer   ...  
+Status:   Elaborating design cpu   ...  
+Status:   Elaborating design control_unit   ...  
+Status:   Elaborating design data_path   ...  
+Status:   Elaborating design ALU   ...  
+Status:   Elaborating design memory   ...  
+Status:   Elaborating design rom_128x8_sync   ...  
+Status:   Elaborating design rw_96x8_sync   ...  
+Warning: Out of range write possible, may cause simulation and synthesis mismatch. (Signal: RAM Block: rw_96x8_sync.Behavioral/_P1 File: /work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/rw_96x8_sync.vhd Line: 51)  (FMR_ELAB-146)
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: RAM Block: rw_96x8_sync.Behavioral File: /work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/rw_96x8_sync.vhd Line: 55)  (FMR_ELAB-147)
+Status:   Elaborating design Output_Ports   ...  
+Status:  Implementing inferred operators...
+Top design set to 'ref:/WORK/computer' with warnings
+   ATTENTION: RTL interpretation messages were produced during link.
+              Verification results may disagree with a logic simulator.
+
+************ RTL Interpretation Summary ************
+************ Design: ref:/WORK/computer
+3 FMR_VHDL-1002 messages produced    
+1 FMR_ELAB-146 message produced    
+1 FMR_ELAB-147 message produced    
+
+Please refer to the Formality log file for more details,
+or execute report_hdlin_mismatches.
+****************************************************
+
+1
+fm_shell (setup)> fm_shell (setup)> Created container 'impl'
+Current container set to 'impl'
+1
+fm_shell (setup)> Loading ddc file '/work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/results/computer.ddc'
+1
+fm_shell (setup)> Setting top design to 'impl:/WORK/computer'
+Status:  Implementing inferred operators...
+Top design successfully set to 'impl:/WORK/computer'
+1
+fm_shell (setup)> fm_shell (setup)> Reference design set to 'ref:/WORK/computer'
+1
+fm_shell (setup)> Implementation design set to 'impl:/WORK/computer'
+1
+fm_shell (setup)> fm_shell (setup)> 5000
+fm_shell (setup)> fm_shell (setup)> Reference design is 'ref:/WORK/computer'
+Implementation design is 'impl:/WORK/computer'
+Status:  Checking designs...
+    Warning: 1024 (2) undriven nets found in reference (implementation) design; see formality5.log for list (FM-399)
+Status:  Building verification models...
+Status:  Processing Guide Commands...
+
+***************************** Guidance Summary *****************************
+                                         Status
+Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
+----------------------------------------------------------------------------
+change_names        :          4          0          0          0          4
+environment         :         16          0          0          0         16
+reg_constant        :          8          0          0          0          8
+transformation
+   map              :          5          0          0          0          5
+   share            :          4          2          0          0          6
+uniquify            :          9          2          0          0         11
+
+Note: If verification succeeds you can safely ignore unaccepted guidance commands.
+
+SVF files read:
+      results/compile_computer.svf
+
+SVF files produced:
+  /work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/log/formality5_svf/
+    svf.txt
+****************************************************************************
+
+Status:  Matching...
+    
+*********************************** Matching Results ***********************************    
+ 1076 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 130 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+****************************************************************************************
+
+Status:  Verifying...
+
+************ RTL Interpretation Summary ************
+************ Design: ref:/WORK/computer
+3 FMR_VHDL-1002 messages produced    
+1 FMR_ELAB-146 message produced    
+1 FMR_ELAB-147 message produced    
+
+Please refer to the Formality log file for more details,
+or execute report_hdlin_mismatches.
+****************************************************
+
+
+***************************** Synopsys Auto Setup Summary ******************************
+
+!!! Synopsys Auto Setup Mode was enabled. !!!
+!!! Verification results are valid assuming the following setup constraints: !!!
+
+### RTL Interpretation Setup
+   set hdlin_ignore_parallel_case false
+   set hdlin_ignore_full_case false
+   set hdlin_error_on_mismatch_message false
+   set hdlin_ignore_embedded_configuration true
+
+### Undriven Signal Handling Setup
+   set verification_set_undriven_signals synthesis
+
+### Test Logic Setup
+   set verification_verify_directly_undriven_output false
+   For details see report_dont_verify_points and report_constants
+
+
+For further details on Synopsys Auto Setup Mode: Type man synopsys_auto_setup
+****************************************************************************************
+
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+   ATTENTION: synopsys_auto_setup mode was enabled.
+              See Synopsys Auto Setup Summary for details.
+   ATTENTION: RTL interpretation messages were produced during link
+              of reference design.
+              Verification results may disagree with a logic simulator.
+-----------------------------------------------------------------------
+ Reference design: ref:/WORK/computer
+ Implementation design: impl:/WORK/computer
+ 1076 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0     128     944       4    1076
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+****************************************************************************************
+1
+fm_shell (verify)> Interrupt detected: Stopping current operation

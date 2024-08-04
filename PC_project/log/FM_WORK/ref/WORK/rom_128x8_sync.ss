@@ -1,0 +1,1 @@
+-1 13 84 25 3 47 2502 50 2 FMR_VHDL-1002/work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/rom_128x8_sync.vhdrom_128x8_sync.BehavioralROMDefault initial value of signal will be ignored

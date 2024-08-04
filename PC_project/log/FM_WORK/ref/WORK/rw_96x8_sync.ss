@@ -1,0 +1,3 @@
+-1 13 82 23 3 47 2502 45 2 FMR_VHDL-1002/work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/rw_96x8_sync.vhdrw_96x8_sync.BehavioralRAMDefault initial value of signal will be ignored
+-1 12 82 27 3 73 5146 51 2 FMR_ELAB-146/work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/rw_96x8_sync.vhdrw_96x8_sync.Behavioral/_P1RAMOut of range write possible, may cause simulation and synthesis mismatch.
+-1 12 82 23 3 75 5147 55 2 FMR_ELAB-147/work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/rw_96x8_sync.vhdrw_96x8_sync.BehavioralRAMIndex may take values outside array bound, may cause simulation mismatch ..

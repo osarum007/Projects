@@ -1,0 +1,537 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version U-2022.12 for linux64 - Nov 22, 2022 
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Initializing gui preferences from file  /home/aigbe/.synopsys_dc_gui/preferences.tcl
+# Osarumwense Aigbe (osarum.aigbe@gmail.com)
+# set link_library {db/sclib_tigfet10_hpnw4_tt_0p70v_25c.db}
+# set target_library {db/sclib_tigfet10_hpnw4_tt_0p70v_25c.db}
+set link_library {/shared/hwmisc/apps/synopsys/syn/2022.12-SP4/libraries/syn/generic.sdb}
+/shared/hwmisc/apps/synopsys/syn/2022.12-SP4/libraries/syn/generic.sdb
+set target_library {/shared/hwmisc/apps/synopsys/syn/2022.12-SP4/libraries/syn/generic.sdb}
+/shared/hwmisc/apps/synopsys/syn/2022.12-SP4/libraries/syn/generic.sdb
+define_design_lib WORK -path ./work
+1
+set_svf results/analyze_computer.svf
+1
+analyze -format vhdl -work work src/ALU.vhd 
+Running PRESTO HDLC
+Compiling Entity Declaration ALU
+Compiling Architecture BEHAVIORAL of ALU
+Warning:  ./src/ALU.vhd:16: The architecture Behavioral has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+Loading db file '/shared/hwmisc/apps/synopsys/syn/2022.12-SP4/libraries/syn/generic.sdb'
+1
+analyze -format vhdl -work work src/rom_128x8_sync.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration ROM_128X8_SYNC
+Compiling Architecture BEHAVIORAL of ROM_128X8_SYNC
+Warning:  ./src/rom_128x8_sync.vhd:15: The architecture Behavioral has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+analyze -format vhdl -work work src/rw_96x8_sync.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration RW_96X8_SYNC
+Compiling Architecture BEHAVIORAL of RW_96X8_SYNC
+Warning:  ./src/rw_96x8_sync.vhd:18: The architecture Behavioral has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+analyze -format vhdl -work work src/Output_Ports.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration OUTPUT_PORTS
+Compiling Architecture BEHAVIORAL of OUTPUT_PORTS
+Warning:  ./src/Output_Ports.vhd:33: The architecture Behavioral has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+analyze -format vhdl -work work src/memory.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration MEMORY
+Compiling Architecture MEM_ARC of MEMORY
+Warning:  ./src/memory.vhd:51: The architecture mem_arc has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+analyze -format vhdl -work work src/data_path.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration DATA_PATH
+Compiling Architecture BEHAVIORAL of DATA_PATH
+Warning:  ./src/data_path.vhd:33: The architecture Behavioral has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+analyze -format vhdl -work work src/control_unit.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration CONTROL_UNIT
+Compiling Architecture BEHAVIORAL of CONTROL_UNIT
+Warning:  ./src/control_unit.vhd:25: The architecture Behavioral has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+analyze -format vhdl -work work src/cpu.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration CPU
+Compiling Architecture BEHAVIORAL of CPU
+Warning:  ./src/cpu.vhd:17: The architecture Behavioral has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+analyze -format vhdl -work work src/computer.vhd
+Running PRESTO HDLC
+Compiling Entity Declaration COMPUTER
+Compiling Architecture COMP_ARC of COMPUTER
+Warning:  ./src/computer.vhd:43: The architecture comp_arc has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+1
+set_svf results/elab_computer.svf
+1
+elaborate computer -work work
+Loading db file '/shared/hwmisc/apps/synopsys/syn/2022.12/libraries/syn/gtech.db'
+Loading db file '/shared/hwmisc/apps/synopsys/syn/2022.12/libraries/syn/standard.sldb'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully. (computer)
+Elaborated 1 design.
+Current design is now 'computer'.
+Information: Building the design 'cpu'. (HDL-193)
+Presto compilation completed successfully. (cpu)
+Information: Building the design 'memory'. (HDL-193)
+Presto compilation completed successfully. (memory)
+Information: Building the design 'control_unit'. (HDL-193)
+
+Statistics for case statements in always block at line 42 in file
+	'./src/control_unit.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            55            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine control_unit line 34 in file
+		'./src/control_unit.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_state_reg  | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine control_unit line 42 in file
+		'./src/control_unit.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|   next_state_reg    | Latch |   4   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully. (control_unit)
+Information: Building the design 'data_path'. (HDL-193)
+
+Inferred memory devices in process
+	in routine data_path line 47 in file
+		'./src/data_path.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     IR_Reg_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine data_path line 59 in file
+		'./src/data_path.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       MAR_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine data_path line 71 in file
+		'./src/data_path.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       PC_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine data_path line 84 in file
+		'./src/data_path.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      A_Reg_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine data_path line 95 in file
+		'./src/data_path.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      B_Reg_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine data_path line 115 in file
+		'./src/data_path.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       CCR_reg       | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (data_path)
+Information: Building the design 'rom_128x8_sync'. (HDL-193)
+Warning:  ./src/rom_128x8_sync.vhd:17: The initial value for signal 'ROM' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+
+Inferred memory devices in process
+	in routine rom_128x8_sync line 52 in file
+		'./src/rom_128x8_sync.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+=======================================================
+| block name/line   | Inputs | Outputs | # sel inputs |
+=======================================================
+| rom_128x8_sync/55 |  128   |    1    |      7       |
+=======================================================
+Presto compilation completed successfully. (rom_128x8_sync)
+Information: Building the design 'rw_96x8_sync'. (HDL-193)
+Warning:  ./src/rw_96x8_sync.vhd:20: The initial value for signal 'RAM' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+
+Inferred memory devices in process
+	in routine rw_96x8_sync line 47 in file
+		'./src/rw_96x8_sync.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       RAM_reg       | Flip-flop |  768  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (rw_96x8_sync)
+Information: Building the design 'Output_Ports'. (HDL-193)
+Warning:  ./src/Output_Ports.vhd:35: The initial value for signal 'RAM' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+
+Inferred memory devices in process
+	in routine Output_Ports line 43 in file
+		'./src/Output_Ports.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       RAM_reg       | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (Output_Ports)
+Information: Building the design 'ALU'. (HDL-193)
+
+Statistics for case statements in always block at line 21 in file
+	'./src/ALU.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            24            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 50 in file
+	'./src/ALU.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            50            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 55 in file
+	'./src/ALU.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            55            |    auto/auto     |
+===============================================
+Presto compilation completed successfully. (ALU)
+1
+# source timing.tcl
+# set_compile_options
+set_svf ../PC_project/results/compile_computer.svf
+1
+# compile_ultra -scan -no_autoungroup -no_seq_output_inversion
+compile -map_effort low
+Warning: The compile -map_effort low is obsolete. Setting this variable now defaults to compile -map_effort medium. Please update your script accordingly. (OPT-1303)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | U-2022.12-DWBB_202212.0 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler                                                                   |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 2640                                   |
+| Number of User Hierarchies                              | 8                                      |
+| Sequential Cell Count                                   | 956                                    |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 1                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 0                                      |
+| Number of Dont Touch Cells                              | 272                                    |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+====================================================================================================
+
+Information: There are 12 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Error: The target library does not contain all required gates.
+Either a NOR, or an AND and an OR gate (two-input) is required for mapping. (OPT-102)
+Error: Compile has abnormally terminated.  (OPT-100)
+
+                                 Formality (R)
+
+               Version V-2023.12-SP4 for linux64 - May 28, 2024 
+
+                    Copyright (c) 1988 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Build: 8972894
+Hostname: rs12
+Current time: Thu Aug  1 18:04:13 2024
+
+Loading db file '/shared/hwmisc/apps/synopsys/fm/2023.12-SP4/libraries/syn/gtech.db'
+
+Script: run_fm.tcl
+
+Information: Term was not able to be set up using xterm-256color . Using "xterm" by default instead. (CLE-10)
+#!fm_shell
+# Osarumwense Aigbe (osarum.aigbe@gmail.com)
+set synopsys_auto_setup true
+true
+set_svf results/compile_computer.svf
+Error: Invalid SVF, contents ignored (FM-339)
+0
+create_container ref
+Created container 'ref'
+Current container set to 'ref'
+1
+set hdlin_vhdl_std 1993
+1993
+set hdlin_vhdl_integer_range_constraint true
+true
+read_vhdl -libname work src/ALU.vhd 
+Loading vhdl file '/work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/ALU.vhd'
+1
+read_vhdl -libname work src/rom_128x8_sync.vhd
+Loading vhdl file '/work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/rom_128x8_sync.vhd'
+Warning: /work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/rom_128x8_sync.vhd  line 50
+	signal ROM block rom_128x8_sync.Behavioral
+	Default initial value of signal will be ignored  (FMR_VHDL-1002)
+   ATTENTION: RTL interpretation messages were produced during read.
+              Verification results may disagree with a logic simulator.
+1
+read_vhdl -libname work src/rw_96x8_sync.vhd
+Loading vhdl file '/work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/rw_96x8_sync.vhd'
+Warning: /work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/rw_96x8_sync.vhd  line 45
+	signal RAM block rw_96x8_sync.Behavioral
+	Default initial value of signal will be ignored  (FMR_VHDL-1002)
+   ATTENTION: RTL interpretation messages were produced during read.
+              Verification results may disagree with a logic simulator.
+1
+read_vhdl -libname work src/Output_Ports.vhd
+Loading vhdl file '/work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/Output_Ports.vhd'
+Warning: /work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/Output_Ports.vhd  line 40
+	signal RAM block Output_Ports.Behavioral
+	Default initial value of signal will be ignored  (FMR_VHDL-1002)
+   ATTENTION: RTL interpretation messages were produced during read.
+              Verification results may disagree with a logic simulator.
+1
+read_vhdl -libname work src/memory.vhd
+Loading vhdl file '/work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/memory.vhd'
+1
+read_vhdl -libname work src/data_path.vhd
+Loading vhdl file '/work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/data_path.vhd'
+1
+read_vhdl -libname work src/control_unit.vhd
+Loading vhdl file '/work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/control_unit.vhd'
+1
+read_vhdl -libname work src/cpu.vhd
+Loading vhdl file '/work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/cpu.vhd'
+1
+read_vhdl -libname work src/computer.vhd
+Loading vhdl file '/work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/computer.vhd'
+1
+set_top computer
+Setting top design to 'ref:/WORK/computer'
+Status:   Elaborating design computer   ...  
+Status:   Elaborating design cpu   ...  
+Status:   Elaborating design control_unit   ...  
+Status:   Elaborating design data_path   ...  
+Status:   Elaborating design ALU   ...  
+Status:   Elaborating design memory   ...  
+Status:   Elaborating design rom_128x8_sync   ...  
+Status:   Elaborating design rw_96x8_sync   ...  
+Warning: Out of range write possible, may cause simulation and synthesis mismatch. (Signal: RAM Block: rw_96x8_sync.Behavioral/_P1 File: /work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/rw_96x8_sync.vhd Line: 51)  (FMR_ELAB-146)
+Warning: Index may take values outside array bound, may cause simulation mismatch .. (Signal: RAM Block: rw_96x8_sync.Behavioral File: /work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/src/rw_96x8_sync.vhd Line: 55)  (FMR_ELAB-147)
+Status:   Elaborating design Output_Ports   ...  
+Status:  Implementing inferred operators...
+Top design set to 'ref:/WORK/computer' with warnings
+   ATTENTION: RTL interpretation messages were produced during link.
+              Verification results may disagree with a logic simulator.
+
+************ RTL Interpretation Summary ************
+************ Design: ref:/WORK/computer
+3 FMR_VHDL-1002 messages produced    
+1 FMR_ELAB-146 message produced    
+1 FMR_ELAB-147 message produced    
+
+Please refer to the Formality log file for more details,
+or execute report_hdlin_mismatches.
+****************************************************
+
+1
+create_container impl
+Created container 'impl'
+Current container set to 'impl'
+1
+read_ddc -container impl -libname work results/computer.ddc
+Loading ddc file '/work/aigbe/syn/q6chip/syn/runs1/brcm3_test_240725/PC_project/results/computer.ddc'
+1
+set_top impl:/computer
+Setting top design to 'impl:/WORK/computer'
+Status:  Implementing inferred operators...
+Top design successfully set to 'impl:/WORK/computer'
+1
+set_reference_design      ref:/work/computer
+Reference design set to 'ref:/WORK/computer'
+1
+set_implementation_design impl:/work/computer
+Implementation design set to 'impl:/WORK/computer'
+1
+set verification_failing_point_limit 5000
+5000
+verify
+Reference design is 'ref:/WORK/computer'
+Implementation design is 'impl:/WORK/computer'
+Status:  Checking designs...
+    Warning: 1024 (2) undriven nets found in reference (implementation) design; see formality7.log for list (FM-399)
+Status:  Building verification models...
+Status:  Matching...
+    
+*********************************** Matching Results ***********************************    
+ 1076 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 130 Matched primary inputs, black-box outputs    
+ 8(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+----------------------------------------------------------------------------------------    
+Unmatched Objects                                                        REF        IMPL    
+----------------------------------------------------------------------------------------    
+ Registers                                                                 8           0    
+   Constrained 0X                                                          8           0    
+****************************************************************************************
+
+Status:  Verifying...
+
+************ RTL Interpretation Summary ************
+************ Design: ref:/WORK/computer
+3 FMR_VHDL-1002 messages produced    
+1 FMR_ELAB-146 message produced    
+1 FMR_ELAB-147 message produced    
+
+Please refer to the Formality log file for more details,
+or execute report_hdlin_mismatches.
+****************************************************
+
+
+***************************** Synopsys Auto Setup Summary ******************************
+
+!!! Synopsys Auto Setup Mode was enabled. !!!
+!!! Verification results are valid assuming the following setup constraints: !!!
+
+### RTL Interpretation Setup
+   set hdlin_ignore_parallel_case false
+   set hdlin_ignore_full_case false
+   set hdlin_error_on_mismatch_message false
+   set hdlin_ignore_embedded_configuration true
+
+### Undriven Signal Handling Setup
+   set verification_set_undriven_signals synthesis
+
+### Test Logic Setup
+   set verification_verify_directly_undriven_output false
+   For details see report_dont_verify_points and report_constants
+
+For further details on Synopsys Auto Setup Mode: Type man synopsys_auto_setup
+****************************************************************************************
+
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+   ATTENTION: synopsys_auto_setup mode was enabled.
+              See Synopsys Auto Setup Summary for details.
+   ATTENTION: RTL interpretation messages were produced during link
+              of reference design.
+              Verification results may disagree with a logic simulator.
+-----------------------------------------------------------------------
+ Reference design: ref:/WORK/computer
+ Implementation design: impl:/WORK/computer
+ 1076 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0     128     944       4    1076
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+****************************************************************************************
+1
+exit
+
+Maximum memory usage for this session: 864 MB
+CPU usage for this session: 7.49 seconds ( 0.00 hours )
+Current time: Thu Aug  1 18:04:20 2024
+Elapsed time: 8 seconds ( 0.00 hours )
+
+Thank you for using Formality (R)!

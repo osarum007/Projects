@@ -1,0 +1,53 @@
+rs12       Thu Jul 25 14:02:28 2024      analyze                                          
+rs12       Thu Jul 25 14:09:34 2024  fetchramlib                                          
+rs12       Thu Jul 25 14:09:41 2024         elab dmfe_buffer_top                          
+rs12       Thu Jul 25 14:16:02 2024      compile dmfe_buffer_top                          
+rs12       Thu Jul 25 15:33:11 2024 prefloorplan dmfe_buffer_top                          
+rs12       Thu Jul 25 15:39:34 2024   readramlef                                          
+rs12       Thu Jul 25 16:04:58 2024   readramndm                                          
+rs12       Thu Jul 25 16:06:56 2024 readavagomisclef                                          
+rs12       Thu Jul 25 16:52:52 2024  createmwlib                                          
+rs12       Thu Jul 25 17:16:21 2024    floorplan dmfe_buffer_top                          
+rs12       Thu Jul 25 18:32:01 2024     pcompile dmfe_buffer_top                          
+rs12       Thu Jul 25 19:46:04 2024    repblock2 pcompile_dmfe_buffer_top                 
+rs12       Thu Jul 25 19:52:46 2024  legalizenxt pcompile_dmfe_buffer_top                 
+rs12       Thu Jul 25 20:14:55 2024   congmapnxt legalize_pcompile_dmfe_buffer_top           
+rs12       Thu Jul 25 22:03:23 2024    wrpostsdc floorplan_dmfe_buffer_top          ocv_wc
+rs12       Thu Jul 25 22:04:21 2024     ispatial dmfe_buffer_top                          
+rs12       Fri Jul 26 02:59:26 2024        check floorplan_dmfe_buffer_top                
+rs12       Fri Jul 26 03:07:30 2024  repblock3si floorplan_dmfe_buffer_top          ocv_wc
+rs12       Fri Jul 26 03:08:44 2024      analctv repblock3si_floorplan_dmfe_buffer_top     ocv_wc
+rs12       Fri Jul 26 03:08:45 2024 check_port_constraints floorplan_dmfe_buffer_top          ocv_wc
+rs12       Fri Jul 26 03:10:26 2024   wrverilog2 compile_dmfe_buffer_top                  
+rs12       Fri Jul 26 03:15:04 2024        fmall dmfe_buffer_top                          
+rs12       Fri Jul 26 04:22:31 2024     fmverify compile_dmfe_buffer_top        prefloorplan_dmfe_buffer_top
+rs12       Fri Jul 26 04:25:35 2024     fmverify prefloorplan_dmfe_buffer_top   floorplan_dmfe_buffer_top
+rs12       Mon Jul 29 11:24:32 2024     pcompile dmfe_buffer_top                          
+rs12       Mon Jul 29 12:38:35 2024    repblock2 pcompile_dmfe_buffer_top                 
+rs12       Tue Jul 30 15:38:23 2024          dcs                                          
+rs12       Wed Jul 31 13:21:43 2024        fmall dmfe_buffer_top                          
+rs12       Wed Jul 31 14:35:24 2024          dcs                                          
+rs12       Wed Jul 31 16:08:36 2024          dcs                                          
+rs12       Thu Aug 01 10:22:50 2024          dcs                                          
+rs12       Thu Aug 01 11:10:01 2024          dcs                                          
+rs12       Thu Aug 01 11:31:45 2024          fms                                          
+rs12       Thu Aug 01 11:38:39 2024          dcs                                          
+rs12       Thu Aug 01 11:47:45 2024          dcs                                          
+rs12       Thu Aug 01 12:22:12 2024          fms                                          
+rs12       Thu Aug 01 12:24:10 2024          fms                                          
+rs12       Thu Aug 01 14:22:26 2024          dcs                                          
+rs12       Thu Aug 01 14:25:00 2024          fms                                          
+rs12       Thu Aug 01 15:03:35 2024          dcs                                          
+rs12       Thu Aug 01 15:27:17 2024          dcs                                          
+rs12       Thu Aug 01 15:48:24 2024          fms                                          
+rs12       Thu Aug 01 15:59:13 2024          fms                                          
+rs12       Thu Aug 01 16:02:33 2024          dcs                                          
+rs12       Thu Aug 01 16:09:44 2024          dcs                                          
+rs12       Thu Aug 01 16:23:43 2024          dcs                                          
+rs12       Thu Aug 01 17:05:08 2024          fms                                          
+rs12       Thu Aug 01 17:13:52 2024          dcs                                          
+rs12       Thu Aug 01 17:14:46 2024          dcs                                          
+rs12       Thu Aug 01 17:46:07 2024          dcs                                          
+rs12       Thu Aug 01 17:53:08 2024          fms                                          
+rs12       Thu Aug 01 17:54:58 2024          dcs                                          
+rs12       Thu Aug 01 17:56:44 2024          fms                                          

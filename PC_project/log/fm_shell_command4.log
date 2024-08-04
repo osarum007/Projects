@@ -1,0 +1,97 @@
+#@ # 
+#@ # Running fm_shell Version O-2018.06-SP2-VAL-20181012 for linux64 -- Oct 12, 2018
+#@ # Date:   Thu Aug  1 17:05:10 2024
+#@ # Run by: aigbe@rs12
+#@ 
+
+source /shared/hwmisc/apps/synopsys/fm/2018.06-SP2-VAL-181012//admin/setup/.synopsys_fm.setup
+#@ # -- Starting source /shared/hwmisc/apps/synopsys/fm/2018.06-SP2-VAL-181012//admin/setup/.synopsys_fm.setup
+
+#@ #
+#@ # .synopsys_fm.setup: Initialization File for Formality
+#@ #
+#@ 
+#@ 
+#@ #
+#@ # Enable stack trace output on fatal.  Not available for all architectures.
+#@ #
+#@ if { $sh_arch == "sparc" || $sh_arch == "sparcOS5" ||      $sh_arch == "hp700" || $sh_arch == "hpux10" } {
+#@   set_unix_variable SYNOPSYS_TRACE ""
+#@ }
+#@ 
+#@ #
+#@ # Variable settings
+#@ #
+#@ set sh_new_variable_message true
+#@ 
+#@ #
+#@ # Synopsys strongly recommends that you uncomment the following command
+#@ # in order to set sh_command_abbrev_mode to the value "Command-Line-Only".
+#@ # Command abbreviation is intended as an interactive convenience.  Using
+#@ # abbreviations in scripts can cause commands to fail in subsequent releases.
+#@ # 
+#@ #set sh_command_abbrev_mode "Command-Line-Only"
+#@ 
+#@ #
+#@ # Some useful aliases
+#@ #
+#@ alias list_commands		help
+#@ 
+#@ #
+#@ # The alias of q to quit is commented out.  Remove the comment 
+#@ # character if you want this alias.  Some users find that having 
+#@ # this particular alias causes problems when mixed with page-mode
+#@ # for reports - an accidental repeated 'q' not only cancels the
+#@ # output but exits the tool.
+#@ #
+#@ #alias q quit
+#@ # -- End source /shared/hwmisc/apps/synopsys/fm/2018.06-SP2-VAL-181012//admin/setup/.synopsys_fm.setup
+
+source -echo -verbose /work/aigbe/hw1/vhdl/common/syn/common/fms.tcl
+#@ # -- Starting source /work/aigbe/hw1/vhdl/common/syn/common/fms.tcl
+
+#@ #!fm_shell
+#@ 
+#@ suppress_message CMD-041
+#@ 
+#@ set script_name fms
+#@ 
+#@ source ../scripts/project.tcl
+#@ # -- End source /work/aigbe/hw1/vhdl/common/syn/common/fms.tcl
+
+cd ..
+set synopsys_auto_setup true
+set_svf results/compile_computer.svf
+create_container refset hdlin_vhdl_std 1993
+set hdlin_vhdl
+set hdlin_vhdl_std 1993
+set hdlin_vhdl_integer_range_constraint true
+read_vhdl -libname saed32hvt_ff0p85v25c src/ALU.vhd 
+read_vhdl -libname work src/rom_128x8_sync.vhd
+read_vhdl -libname work src/rw_96x8_sync.vhd
+read_vhdl -libname work src/Output_Ports.vhd
+read_vhdl -libname work src/memory.vhd
+read_vhdl -libname work src/data_path.vhd
+read_vhdl -libname work src/control_unit.vhd
+read_vhdl -libname work src/cpu.vhd
+read_vhdl -libname work src/computer.vhdcreate_container ref
+create_container ref
+set hdlin_vhdl_std 1993
+set hdlin_vhdl_integer_range_constraint true
+read_vhdl -libname work src/ALU.vhd
+read_vhdl -libname work src/rom_128x8_sync.vhd
+read_vhdl -libname work src/rw_96x8_sync.vhd
+read_vhdl -libname work src/Output_Ports.vhd
+read_vhdl -libname work src/memory.vhd
+read_vhdl -libname work src/data_path.vhd
+read_vhdl -libname work src/control_unit.vhd
+read_vhdl -libname work src/cpu.vhd
+read_vhdl -libname work src/computer.vhd
+set_top computer
+create_container impl
+read_ddc -container impl -libname work results/computer.ddc
+set_top impl:/computer
+set_reference_design      ref:/work/computer
+set_implementation_design impl:/work/computer
+set verification_failing_point_limit 5000
+verify
